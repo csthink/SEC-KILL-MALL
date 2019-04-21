@@ -1,0 +1,33 @@
+debug: true
+logging:
+  level:
+    root: info
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sec_kill?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+#    url: jdbc:mysql://localhost:3306/jdbc?useUnicode=true&amp;characterEncoding=utf8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+
+server:
+  port: 8080
+
+mybatis:
+    type-aliases-package: com.csthink.seckill.domain
+    mapper-locations: classpath:com/csthink/seckill/dao/*.xml
+    configuration:
+      map-underscore-to-camel-case: true
+      default-fetch-size: 100
+      default-statement-timeout: 3000

@@ -1,0 +1,12 @@
+debug: false
+logging:
+  level:
+    root: info
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc://localhost:3306/sec_kill
+    username: root
+    password: root
+server:
+  port: 80
